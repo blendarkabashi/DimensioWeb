@@ -1,1 +1,1 @@
-*{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}/*# sourceMappingURL=./style.css.map */
+@import '../css/vendor/bootstrap-reboot.css';@import '../css/vendor/bootstrap-grid.css';*{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}.container{max-width:1500px}.main-page-title{font-size:30px}/*# sourceMappingURL=./style.css.map */
