@@ -1,0 +1,55 @@
+//  main: ../style.less
+
+// ==========================================================================
+// VALUES
+// ==========================================================================
+
+/* colors */
+
+/* general */
+
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* mixins */
+.transition(@all) {
+  -webkit-transition: @all;
+  -moz-transition: @all;
+  -o-transition: @all;
+  transition: @all;
+}
+
+.transition-delay(@delay) {
+  -webkit-transition-delay: @delay;
+  -moz-transition-delay: @delay;
+  -o-transition-delay: @delay;
+  -ms-transition-delay: @delay;
+  transition-delay: @delay;
+}
+
+.rotate(@deg) {
+  -webkit-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+
+.transform(@transform) {
+  -webkit-transform: @transform;
+  -ms-transform: @transform;
+  transform: @transform;
+}
+
+.box-shadow (@string) {
+  -webkit-box-shadow: @string;
+  -moz-box-shadow: @string;
+  box-shadow: @string;
+}
+
+.letter-spacing ( @psValue ){
+  letter-spacing: ( @psValue / 1000 ) * 1em; 
+}
+
+/* insert fonts here */
