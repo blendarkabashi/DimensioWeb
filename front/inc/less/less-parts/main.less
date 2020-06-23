@@ -1,4 +1,124 @@
 //  main: ../style.less
-.main-page-title{
-    font-size: 30px;
+
+// GENERAL
+p,h1,h2,h3,h4,h5,ul,li,a{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.bottom-overlay{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+}
+
+.button{
+    display: inline-block;
+    border: 2px solid @main-yellow;
+    color: white;
+    padding: 10px 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    .transition(color 0.3s ease);
+    &:hover{
+        color: @main-yellow;
+        text-decoration: none;
+    }
+}
+
+.title-module{
+    text-align: center;
+    &.white{
+        .subtitle,.title,.description{
+            color: white;
+        }
+    }
+    &.part-black{
+        .subtitle,.title{
+            color: @main-black;
+        }
+        .description{
+            color: @black-description-color;
+        }
+    }
+    &.black{
+        .subtitle,.title,.description{
+            color: @main-black;
+        }
+    }
+    .subtitle{
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    .title{
+            font-size: 32px;
+        font-weight: 600;
+    }
+    .description{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+}
+
+// HOMEPAGE
+.main-banner-section{
+    background: @main-black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    .section-content{
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        >*{
+            margin-bottom: 30px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+        .banner-title{
+            line-height: 1;
+            letter-spacing: 1px;
+        }
+        
+        .banner-description{
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: @gray-descriptions-color;
+        }
+    }
+}
+
+.our-work-section{
+}
+
+.our-services-section{
+    background: @main-yellow;
+    .title-module{
+        .description{
+            color: @main-black;
+        }
+    }
+}
+
+.our-technologies-section{
+    background: @main-black;
+}
+
+.contact-section{
+    background: @main-grey;
 }

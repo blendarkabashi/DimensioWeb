@@ -15,8 +15,8 @@
 
 
     <!-- scripts here -->
-    <link href="../front/inc/js/main.js" rel="stylesheet">
-
+    <script src="inc/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="../front/inc/js/main.js"></script>
 
 </head>
 
@@ -25,7 +25,21 @@
     <!-- header -->
     <header class="header">
         <div class="container">
-            
+            <div class="navbar-wrapper">
+                <div class="logo-holder">
+                    <div class="logo" style="background-image:url(../front/inc/images/DimensioLogo.svg)"></div>
+                </div>
+                <div class="main-menu">
+                    <ul class="main-links">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="" class="link">Get Quote</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 

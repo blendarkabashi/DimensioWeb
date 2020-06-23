@@ -1,2 +1,52 @@
 // main: ../style.less
 
+.header {
+    position: fixed;
+    z-index: 9999;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0);
+    width: 100%;
+
+    .navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo-holder {
+            height: 50px;
+            width: 50px;
+
+            .logo {
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .main-menu{
+            .main-links{
+                list-style: none;
+                display: flex;
+                padding: 0;
+                margin: 0;
+                li{
+                    margin-right: 30px;
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        &.link{
+                            padding: 5px 10px;
+                            font-weight: bold;
+                            background: @main-yellow;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
