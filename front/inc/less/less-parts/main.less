@@ -8,20 +8,22 @@ p,h1,h2,h3,h4,h5,ul,li,a{
 
 section{
     position: relative;
-    padding-top: 100px;
-    padding-bottom: 200px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .bottom-overlay{
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     right: 0;
     height: auto;
     width: 100%;
+    z-index: 1;
 }
 
 .button{
+    position: relative;
     display: inline-block;
     border: 2px solid @main-yellow;
     color: white;
@@ -29,13 +31,64 @@ section{
     font-weight: bold;
     letter-spacing: 1px;
     text-decoration: none;
-    .transition(color 0.3s ease);
+    .transition(all 0.3s ease);
+
+    &:after{
+        z-index: -1;
+        content: '';
+        width: 0%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: @main-yellow;
+        .transition(width 0.3s ease);
+    }
+
     &:hover{
-        color: @main-yellow;
         text-decoration: none;
+        color: @main-black;
+        &:after{
+            width: 100%;
+        }
+    }
+    &.black{
+        color:@main-black;
+        border: 2px solid @main-black;
+        .transition(all 0.3s ease);
+
+        &.yellow{
+            &:hover{
+                color: @main-yellow
+            }
+        }
+        &:after{
+            z-index: -1;
+            content: '';
+            width: 0%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: @main-black;
+            .transition(width 0.3s ease);
+        }
+        
+        &:hover{
+            text-decoration: none;
+            color: white;
+            &:after{
+                width: 100%;
+            }
+        }
     }
 }
 
+.section-wrapper{
+    z-index: 2;
+    position: relative;
+    text-align: center;
+}
 .title-module{
     text-align: center;
     &.white{
@@ -67,11 +120,13 @@ section{
     }
     .description{
         margin-top: 20px;
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
 // HOMEPAGE
+
+// Main Banner Styling
 .main-banner-section{
     background: @main-black;
     height: 100vh;
@@ -79,10 +134,10 @@ section{
     justify-content: center;
     align-items: center;
     color: white;
+    padding-top: 200px;
+    padding-bottom: 250px;
 
-    .section-content{
-        z-index: 2;
-        position: relative;
+    .section-wrapper{
         text-align: center;
         >*{
             margin-bottom: 30px;
@@ -93,17 +148,61 @@ section{
         .banner-title{
             line-height: 1;
             letter-spacing: 1px;
+            font-size: 40px;
         }
         
         .banner-description{
-            font-size: 16px;
+            font-size: 18px;
             letter-spacing: 1px;
             color: @gray-descriptions-color;
         }
     }
 }
 
-.our-work-section{
+// Our Approach Section Styling
+.our-approach-section{
+    .section-content{
+        padding: 40px 0px;
+        .box-wrapper{
+            min-height: 400px;
+            .box-content{
+                padding: 30px;
+                height: 100%;
+                -webkit-box-shadow: 0px 0px 20px 0px rgba(34,31,31,0.1);
+                -moz-box-shadow: 0px 0px 20px 0px rgba(34,31,31,0.1);
+                box-shadow: 0px 0px 20px 0px rgba(34,31,31,0.1);
+                .transition(box-shadow 0.2s ease);
+                &:hover{
+                    -webkit-box-shadow: 0px 0px 20px 0px rgba(34,31,31,0.3);
+                    -moz-box-shadow: 0px 0px 20px 0px rgba(34,31,31,0.3);
+                    box-shadow: 0px 0px 20px 0px rgba(34,31,31,0.3);
+    
+                }
+
+                .image-part{
+                    margin:0 auto;
+                    height: 150px;
+                    width: 150px;
+                    border-radius: 100%;
+                    background:@main-black;
+                    .image{
+                        height: 100%;
+                        width: 100%;
+                        background-size: 50%;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border-radius: 100%;
+                    }
+                }
+                .text-part{
+                    margin-top: 20px;
+                    .box-description{
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .our-services-section{
@@ -113,12 +212,136 @@ section{
             color: @main-black;
         }
     }
+    .section-content{
+        padding: 100px 0px;
+        .service-row{
+            margin-bottom: 100px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+        .step-information{
+            min-height: 420px;
+            .column-holder{
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .text-part{
+                    .step-title{
+                        font-size: 32px;
+                        margin-bottom: 20px;
+                        font-weight: bold;
+                    }
+                    .step-description{
+                        font-size: 20px;
+                        letter-spacing: 1px;
+                    }
+                }
+                .counter-part{
+                    position: absolute;
+                    font-size: 450px;
+                    color: @main-yellow;
+                    color: rgba(32, 32, 32, 0.055);
+                }
+            }
+        }
+        .step-illustration{
+            .illustration-holder{
+                height: 100%;
+                width: 100%;
+                .illustration{
+                    height: 100%;
+                    width: 100%;
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
 }
-
+// #5D5D5D round box tech stack
 .our-technologies-section{
     background: @main-black;
+    .section-wrapper{
+        .section-content{
+            .tabs-wrapper{
+                padding-top:40px;
+                .tabs-header{
+                    ul{
+                        width: 100%;
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        a{
+                            color: #5D5D5D;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            .transition(color 0.3s ease);
+                            &.active{
+                                color: white;
+                            }
+                            &:hover{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .tabs-content{
+                    padding-top: 40px;
+                    .step{
+                        pointer-events: none;
+                        max-height: 0;
+                        opacity: 0;
+                        transform: translateY(50px);
+                        .transition(all 0.5s ease);
+                        &.active{
+                            pointer-events: all;
+                            max-height: 500px;
+                            transform: translateY(0);
+                            opacity: 1;
+                        }
+                        .row{
+                            justify-content: space-between;
+                            .item-wrapper{
+                                margin-bottom: 40px;
+                                .item{
+                                    margin: 0 auto;
+                                    height: 150px;
+                                    width: 150px;
+                                    background: #5D5D5D;
+                                    border-radius: 100%;
+                                    .logo{
+                                        height: 100%;
+                                        width: 100%;
+                                        background-size: 50%;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                    }
+                                }
+                                .item-label{
+                                    font-size: 18px;
+                                    color: white;
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .contact-section{
     background: @main-grey;
+}
+
+.news-section{
+
 }
