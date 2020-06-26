@@ -50,3 +50,42 @@
         }
     }
 }
+
+.footer{
+    padding: 120px 0px;
+    background: @main-black;
+    .subscribe-part{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .label{
+            p{
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                margin-right: 40px;
+            }
+        }
+        .email-input{
+            input{
+                min-width: 300px;
+                padding: 10px;
+                border: none;
+                ::placeholder{
+                    color: @gray-descriptions-color;
+                }
+            }
+            .subscribe-btn{
+                display: inline-block;
+                color: @main-black;
+                font-weight: bold;
+                padding: 10px;
+                background: @main-yellow;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+}
