@@ -229,6 +229,10 @@ section{
                 align-items: center;
                 justify-content: center;
                 .text-part{
+                    text-align: right;
+                    &:nth-child(odd){
+                        text-align: left;
+                    }
                     .step-title{
                         font-size: 32px;
                         margin-bottom: 20px;
@@ -340,7 +344,7 @@ section{
     .section-content{
         position: relative;
         .contact-form-wrapper{
-            min-width: 800px;
+            min-width: 100%;
             position: absolute;
             margin-top: 40px;
             z-index:1;

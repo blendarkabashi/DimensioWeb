@@ -94,7 +94,7 @@
             <div class="row service-row">
                 <div class="col-md-6 step-information">
                     <div class="column-holder">
-                        <div class="text-part" style="text-align:left;">
+                        <div class="text-part">
                             <h2 class="step-title">Web Development.</h2>
                             <p class="step-description">Lorem ipsum dolor sit amet consectetur adipiscing elit, ad
                                 praesent pharetra natoque dictumst ut, felis sagittis pulvinar consequat torquent fusce.
@@ -120,7 +120,7 @@
                 </div>
                 <div class="col-md-6 step-information">
                     <div class="column-holder">
-                        <div class="text-part" style="text-align:right;">
+                        <div class="text-part">
                             <h2 class="step-title">Web Design.</h2>
                             <p class="step-description">Lorem ipsum dolor sit amet consectetur adipiscing elit, ad
                                 praesent pharetra natoque dictumst ut, felis sagittis pulvinar consequat torquent fusce.
@@ -136,7 +136,7 @@
             <div class="row service-row">
                 <div class="col-md-6 step-information">
                     <div class="column-holder">
-                        <div class="text-part" style="text-align:left;">
+                        <div class="text-part">
                             <h2 class="step-title">Mobile Development.</h2>
                             <p class="step-description">Lorem ipsum dolor sit amet consectetur adipiscing elit, ad
                                 praesent pharetra natoque dictumst ut, felis sagittis pulvinar consequat torquent fusce.
@@ -433,7 +433,7 @@
         </div>
         <div class="section-content container">
             <div class="row">
-                <div class="col-md-3 news-box-wrapper">
+                <div class="col-md-6 col-lg-3 news-box-wrapper">
                     <div class="news-box">
                         <div class="image-part">
                             <div class="image" style="background-image:url('../front/inc/images/news1.png')"></div>
@@ -450,7 +450,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 news-box-wrapper">
+                <div class="col-md-6 col-lg-3 news-box-wrapper">
                     <div class="news-box">
                         <div class="image-part">
                             <div class="image" style="background-image:url('../front/inc/images/news2.png')"></div>
@@ -467,7 +467,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 news-box-wrapper">
+                <div class="col-md-6 col-lg-3 news-box-wrapper">
                     <div class="news-box">
                         <div class="image-part">
                             <div class="image" style="background-image:url('../front/inc/images/news3.png')"></div>
@@ -484,7 +484,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 news-box-wrapper">
+                <div class="col-md-6 col-lg-3 news-box-wrapper">
                     <div class="news-box">
                         <div class="image-part">
                             <div class="image" style="background-image:url('../front/inc/images/news3.png')"></div>

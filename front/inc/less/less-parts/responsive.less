@@ -1,4 +1,51 @@
 //  main: ../style.less
-@media (max-width: 1950px) {
 
+@media (max-width: 800px) {
+    .footer{
+        .subscribe-part{
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        .navbar-wrapper {
+            .main-menu {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .our-services-section {
+        .section-content {
+            .step-information {
+                .column-holder {
+                    .text-part {
+                        &:nth-child(odd){
+                        text-align: center;
+
+                        }
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .our-technologies-section{
+        .section-wrapper{
+            .section-content{
+                .tabs-wrapper{
+                    .tabs-header{
+                        ul{
+                            flex-direction: column;
+                        }
+                    } 
+                } 
+            } 
+        } 
+    } 
 }
