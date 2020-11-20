@@ -1,0 +1,170 @@
+// main: ../style.less
+
+.header {
+    position: fixed;
+    z-index: 9999;
+    padding: 20px;
+    background:rgba(19, 19, 19, 0.91);
+    width: 100%;
+
+    .dropdown-menu{
+        height: 0;
+        pointer-events: none;
+        opacity: 0;
+        .transition(all 0.3s ease);
+
+        &.open{
+            height: calc(100vh - 80px);
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .menu-holder{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            ul{
+                padding: 0;
+                list-style: none;
+                text-align: center;
+                li{
+                    margin-bottom: 10px;
+                    a{
+                        font-size: 18px;
+                        color: white;
+                        text-decoration: none;
+                        .transition(all 0.3s ease);
+                        &:hover{
+                            color: @main-yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo-holder {
+            height: 50px;
+            width: 50px;
+
+            .logo {
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .main-menu{
+            .main-links{
+                list-style: none;
+                display: flex;
+                padding: 0;
+                margin: 0;
+                li{
+                    margin-right: 30px;
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        &.link{
+                            padding: 5px 10px;
+                            font-weight: bold;
+                            background: @main-yellow;
+                            color: black;
+                        }
+                    }
+                }
+            }
+            .hamburger{
+                height: 0;
+                width: 40px;
+                opacity: 0;
+                pointer-events: none;
+                position: relative;
+                .transition(all 0.3s ease);
+                
+                &.active{
+                    span{
+                        &:nth-child(2){
+                            transform: rotate(-45deg) translateY(-50%);
+                        }
+                        &:first-child{
+                            top: 50%;
+                            transform: rotate(45deg) translateY(-50%);
+                        }
+                        &:last-child{
+                            opacity: 0;
+                        }
+                    }
+                }
+                span{
+                    border-radius: 50px;
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    background: white;
+                    height: 2px;
+                    .transition(all 0.3s ease);
+                    &:first-child{
+                        top: 0;
+                    }
+                    &:last-child{
+                        bottom: 0;
+                    }
+                    &:nth-child(2){
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    padding: 120px 0px;
+    background: @main-black;
+    .subscribe-part{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .label{
+            p{
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                margin-right: 40px;
+            }
+        }
+        .email-input{
+            display: flex;
+            input{
+                padding: 10px;
+                border: none;
+                ::placeholder{
+                    color: @gray-descriptions-color;
+                }
+            }
+            .subscribe-btn{
+                display: inline-block;
+                color: @main-black;
+                font-weight: bold;
+                padding: 10px;
+                background: @main-yellow;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+}
