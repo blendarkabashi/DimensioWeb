@@ -26,6 +26,7 @@
     <!-- header -->
     <header class="header">
         <div class="">
+            <div class="container">
             <div class="navbar-wrapper">
                 <div class="logo-holder">
                     <div class="logo" style="background-image:url(inc/images/DimensioLogo.svg)"></div>
@@ -45,6 +46,8 @@
                         <span></span>
                     </div>
                 </div>
+            </div>
+
             </div>
         </div>
         <div class="dropdown-menu">

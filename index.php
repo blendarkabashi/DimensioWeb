@@ -75,8 +75,6 @@
                 </div>
             </div>
         </div>
-        <a href="" class="button black">Get in Touch</a>
-
     </div>
 </section>
 
