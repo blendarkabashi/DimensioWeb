@@ -1,3 +1,4 @@
+<?php include 'parts/header.php'; ?>
 
 <section class="main-banner-section">
     <img class="bottom-overlay" src="inc/images/bottom-overlay.svg"></img>
@@ -500,3 +501,4 @@
     </div>
 </section>
 
+<?php include 'parts/footer.php'; ?>
